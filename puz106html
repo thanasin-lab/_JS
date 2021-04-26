@@ -1,0 +1,146 @@
+<!--  v1.02 Added grid and bumbled through the text box formatting -->
+<!--  24/3/21, Nev - added grunt code to fill the text boxes - just to get it working -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>v1.05 Binary Puzzle 6x6</title>
+    <script type='text/javascript'>  
+        //  26/4/21, KIAN-A - Reducing 6 loops to 2
+        var G1 = [1, null, 0, null, 0, 0, null, 1, null, 0, 0, null, null, null, null, null, null, 0, 0, null, null, 1, null, null, 1, 0, null, 1, 1, null, null, 0, null, null, 1, 1];
+        var G2 = [null, 1, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null];
+        var G3 = [null, null, 1, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null];
+
+        function loadGrid(G) {                    // load 6x6 test games
+            var Row = 6;                        // declare # of rows
+            var Col = 6;                        // declare # of columns
+            var Grid = [];                      // declare Grid as an array
+
+            for (let i = 0; i < Row; i++) {
+                for (let i = 0; i < Col; i++) {
+                    document.getElementById('B'(i + 1) + (j + 1)).value = G[j * Col + 1];
+                }
+            }
+
+        }
+
+    </script>
+    <style type="text/css">
+        /* 30/7/19 Rain Holloway (2020 student) - to eliminate double lines */
+        * {
+            padding: 0;
+            border-collapse: collapse;
+        }
+
+        /* 27/7/19 Nev - for formatting of the table cells */
+        .gameboard {
+            width: 40px;
+            height: 40px;
+            font-size: 30px;
+            color: #0B1AB8;
+            vertical-align: middle;
+            text-align: center;
+            border-collapse: collapse;
+            border-spacing: 0;
+            border: 1px solid #ED2428;
+        }
+    </style>
+</head>
+<body onload="loadGrid(G1)">
+    <!--  21/4/21 Now loading the variable "G1" which is a 36 element array  -->
+    <form id="input">
+        <h1>v1.06 Binary Puzzle Game (6x6)</h1>
+        <h2>v1.06: Reworking back-end code to minimise amount of functions</h2>
+        <p>Return to <a href="index.html">home</a>:</p>
+        <p>&nbsp;</p>
+        <!--  set up the board as a table with a textbox in each cell  -->
+        <table class="gameboard">
+            <tr>
+                <td>
+                    <input id="B11" type="text" class="gameboard" /></td>
+                <td>
+                    <input id="B21" type="text" class="gameboard" /></td>
+                <td>
+                    <input id="B31" type="text" class="gameboard" /></td>
+                <td>
+                    <input id="B41" type="text" class="gameboard" /></td>
+                <td>
+                    <input id="B51" type="text" class="gameboard" /></td>
+                <td>
+                    <input id="B61" type="text" class="gameboard" /></td>
+            </tr>
+            <tr>
+                <td>
+                    <input id="B12" type="text" class="gameboard" /></td>
+                <td>
+                    <input id="B22" type="text" class="gameboard" /></td>
+                <td>
+                    <input id="B32" type="text" class="gameboard" /></td>
+                <td>
+                    <input id="B42" type="text" class="gameboard" /></td>
+                <td>
+                    <input id="B52" type="text" class="gameboard" /></td>
+                <td>
+                    <input id="B62" type="text" class="gameboard" /></td>
+            </tr>
+            <tr>
+                <td>
+                    <input id="B13" type="text" class="gameboard" /></td>
+                <td>
+                    <input id="B23" type="text" class="gameboard" /></td>
+                <td>
+                    <input id="B33" type="text" class="gameboard" /></td>
+                <td>
+                    <input id="B43" type="text" class="gameboard" /></td>
+                <td>
+                    <input id="B53" type="text" class="gameboard" /></td>
+                <td>
+                    <input id="B63" type="text" class="gameboard" /></td>
+            </tr>
+            <tr>
+                <td>
+                    <input id="B14" type="text" class="gameboard" /></td>
+                <td>
+                    <input id="B24" type="text" class="gameboard" /></td>
+                <td>
+                    <input id="B34" type="text" class="gameboard" /></td>
+                <td>
+                    <input id="B44" type="text" class="gameboard" /></td>
+                <td>
+                    <input id="B54" type="text" class="gameboard" /></td>
+                <td>
+                    <input id="B64" type="text" class="gameboard" /></td>
+            </tr>
+            <tr>
+                <td>
+                    <input id="B15" type="text" class="gameboard" /></td>
+                <td>
+                    <input id="B25" type="text" class="gameboard" /></td>
+                <td>
+                    <input id="B35" type="text" class="gameboard" /></td>
+                <td>
+                    <input id="B45" type="text" class="gameboard" /></td>
+                <td>
+                    <input id="B55" type="text" class="gameboard" /></td>
+                <td>
+                    <input id="B65" type="text" class="gameboard" /></td>
+            </tr>
+            <tr>
+                <td>
+                    <input id="B16" type="text" class="gameboard" /></td>
+                <td>
+                    <input id="B26" type="text" class="gameboard" /></td>
+                <td>
+                    <input id="B36" type="text" class="gameboard" /></td>
+                <td>
+                    <input id="B46" type="text" class="gameboard" /></td>
+                <td>
+                    <input id="B56" type="text" class="gameboard" /></td>
+                <td>
+                    <input id="B66" type="text" class="gameboard" /></td>
+            </tr>
+        </table>
+        <br />
+    </form>
+</body>
+</html>
